@@ -1,0 +1,40 @@
+body {
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+
+    /* position: fixed; */
+    margin: 20px auto;
+    padding: 35px;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+.hero {
+    display: grid;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+
+}
+.hero img {
+    width: auto;
+    max-width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
