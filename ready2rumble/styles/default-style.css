@@ -24,13 +24,16 @@
   --nav-hover-background-color: #31252B;
 }
 
+/* img {
+    max-width: 100%;
+} */
 
 body {
-    background-color: var(--primary-color);
+    background-color: white;
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, small {
     font-family: var(--heading-font);
     color: var(--headline-color-on-color);
 }
@@ -39,6 +42,9 @@ p {
     font-family: var(--paragraph-font);
     color: var(--paragraph-color-on-color);
     padding: 1em;
+}
+a {
+    font-family: var(--paragraph-font);
 }
 
 img {
@@ -58,8 +64,19 @@ img {
 
 }
 
+.top-bar a {
+    height: fit-content;
+}
+
+.top-bar h1 {
+    grid-column: span 6;
+    /* grid-row: span 2; */
+    padding-left: 20px;
+    
+}
+
 .socials {
-    grid-column: 7/11;
+    grid-column: 8/11;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -70,9 +87,203 @@ img {
 
 .socials h4 {
     grid-row: 2/3;
+    text-align: center;
+    margin-top: .25em;
+    margin-bottom: .25em;
 }
 
 .socials a img {
-    max-width: 160px;
+    max-width: 80px;
     width: 100%;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--nav-background-color);
+
+
+}
+nav a {
+    text-decoration: none;
+    color: var(--accent1-color);
+    padding: 25px;
+    font-size: 1.3em;
+    margin: 0 40px;    
+}
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+
+}
+
+main  {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 500px);
+    overflow: hidden;
+
+    width: 100%; 
+    max-width: inherit;
+    margin: 5px auto;
+}
+
+.hero-img {
+    /* margin-top: 5px; */
+    width: 100%;
+    max-width: 1600px;
+    filter: blur(4px);
+    z-index: -5;
+    /* opacity: 0%; */
+    grid-column: 1 / span 8;
+    grid-row: 1 / 3;
+    object-fit: cover;
+}
+
+.info-card {
+    /* GRID FOR CHILDREN */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); 
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.info-card:nth-of-type(odd) {
+    /* FOR PARENT GRID */
+    grid-column: 1 / span 8;
+    grid-row: 1/2;
+
+
+}
+
+.info-card:nth-of-type(even) {
+    /* FOR PARENT GRID */
+    grid-column: 1 / span 8;
+    grid-row: 2/3;
+
+    /* GRID FOR CHILDREN */
+    /* display: grid;
+    grid-template-columns: repeat(8, 1fr); */
+}
+
+.info-card h3, .info-card p {
+    background-color: var(--paragraph-background-color);
+    height: fit-content;
+    width: fit-content;
+    padding: .5em;
+    border-radius: 10px;
+} 
+
+.info-card:nth-of-type(odd) h3 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    align-self: end;
+    margin-bottom: 0;
+}
+
+.info-card:nth-of-type(odd) p {
+    grid-column: 2 / span 3;
+    grid-row: 2/3;
+    padding-bottom: 1.5em;
+    /* margin-bottom: 0; */
+}
+
+.info-card:nth-of-type(odd) img {
+    max-width: 400px;
+    grid-column: 6/9;
+    grid-row: 1/3;
+    border-radius: 15px;
+}
+
+.info-card:nth-of-type(odd) .button-box {
+    grid-row: 2/3 ;
+    grid-column: 2/5;
+    align-self: end;
+    /* margin-top: ; */
+}
+
+.info-card:nth-of-type(even) h3 {
+    grid-column: 6/8;
+    grid-row: 1/2;
+    align-self: end;
+    margin-bottom: 0;
+}
+
+.info-card:nth-of-type(even) p {
+    grid-column: 5 / span 3;
+    grid-row: 2/3;
+    padding-bottom: 1.5em;
+    /* margin-bottom: 0; */
+}
+
+.info-card:nth-of-type(even) img {
+    max-width: 300px;
+    grid-column: 2/5;
+    grid-row: 1/3;
+    border-radius: 15px;
+}
+
+.info-card:nth-of-type(even) .button-box {
+    grid-row: 2/3 ;
+    grid-column: 5/8;
+    align-self: end;
+    /* margin-top: ; */
+}
+
+
+
+
+.button-box a {
+    border-radius: 10px;
+    background-color: #987284;
+    height: fit-content;
+    width: fit-content;
+    padding: 15px;
+    text-decoration: none;
+}
+.button-box a:hover {
+    background-color: aqua;
+    color: white;
+}
+
+
+footer {
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    
+
+    justify-content: center;
+    /* justify-items: center; */
+    align-items: center;
+    align-content: center;
+}
+
+footer > * {
+    grid-row: 1/3;
+}
+
+footer a .text-link {
+    color: var(--nav-link-color);
+    grid-column: span 2;
+}
+
+footer h3 {
+    grid-row: 1/3;
+    grid-column: 1 / span 4;
+    padding-left: 20px;
+    align-self: center;
+    padding-bottom: .7em;
+}
+
+footer small {
+    grid-row: 1/3;
+    grid-column: 1 / span 3;
+    padding-left: 20px;
+    align-self: center;
+    padding-top: 1.5em;
 }
