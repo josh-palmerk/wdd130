@@ -43,7 +43,7 @@
                 <p> A young, sharp mind with an insatiable knack for digesting and applying new concepts. I love tinkering, testing, improving, breaking, optimizing, theorizing, applying. Looking for internship opportunities to grow my limited in-field experience. I've recently begun conducting my own experiments to provide this experience myself. Or at least, I tell myself that's why. It's really just because I enjoy it.
                     If you're interested in investing in a mind like mine, I'd be happy to connect and see what I can learn and accomplish in any position I'm offered.
                 </p>
-                <img src="images/rsz_me.jpg" alt="Josh Palmer">
+                <img id="myImg" src="images/rsz_me.jpg" alt="Josh Palmer">
                 <div class="button-box">
                     <a class="about-btn" href="about.html">About Him</a>
                 </div>
@@ -52,11 +52,24 @@
                 <h3>His Work</h3> <!-- Need a short description here -->
                 <p>I've taken initiative in my personal life to do things I normally wouldn't and to think like an engineer. I always exercise caution, of course, but I also always end up with results. It's been pretty self-serving stuff so far, like simpler apps for my phone or home networking, but it's taught me a great deal about a huge number of topics. If you're interested in reading more about these sorts of things I suggest using the button below.
                 </p>
-                <img src="images/opti-post.jpg" alt="Josh Palmer">
+                <img id="opti-post" src="images/opti-post.jpg" alt="Optiplex Posting">
                 <div class="button-box">
                     <a class="skills-btn" href="skills-projects.html">View Projects</a>
                 </div>
             </div>
+
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+              
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+              
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+              </div>
+
         </main>
 
 
@@ -79,4 +92,35 @@
         </footer>
     </div>
 </body>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img01 = document.getElementById("myImg");
+    var img02 = document.getElementById("opti-post");
+
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img01.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    }
+    img02.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+</script>
+
 </html>
