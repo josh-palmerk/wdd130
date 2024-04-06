@@ -125,7 +125,7 @@ main * {
     display: grid;
     grid-template-columns: repeat(8, 12.5%); */
 
-    width: minmax(300px, 1fr);
+    /* width: minmax(300px, 1fr); */
     margin: 1.3em;
 
     background-color: var(--paragraph-background-color);
