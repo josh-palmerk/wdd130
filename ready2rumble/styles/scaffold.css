@@ -180,7 +180,6 @@ footer {
     
 
     justify-content: center;
-    /* justify-items: center; */
     align-items: center;
     align-content: center;
 
@@ -215,8 +214,6 @@ footer small {
 
 
 
-
-
 /* -------- OTHER ELEMENTS -------------- */
 
 .button-box a {
@@ -236,5 +233,3 @@ footer small {
     background-color: var(--nav-hover-background-color);
     color: white;
 }
-
-

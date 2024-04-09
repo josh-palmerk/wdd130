@@ -29,8 +29,6 @@ main  {
     display: grid;
     
     grid-template-columns: repeat(8, 12.5%);
-    /* grid-template-rows: repeat(2, 500px); */
-    /*overflow: hidden;*/
 
     width: 100%; 
     max-width: inherit;
@@ -48,9 +46,6 @@ main * {
 }
 
 
-
-
-
 .collage {
     grid-column: 4/9;
     grid-row: 1/3;
@@ -58,26 +53,18 @@ main * {
     display: grid;
     grid-template-columns: repeat(8, 12.5%);
 
-    /*grid-auto-rows: 0;  Prevent rows from defining height */
-    /*gap: 10px;  Adjust the gap between grid items */
-
     margin: 1.3em;
 }
 
 .collage img {
-    /* width: 100%;
-    max-width: 100%;
-    height: auto; */
-
-
-
+  
     border-radius: 5%;
 }
 
 .collage-item {
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    padding-top: 56.25%; /* 16:9 aspect ratio */
 
 }
 
@@ -87,12 +74,10 @@ main * {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crop image to cover the container while maintaining aspect ratio */
+    object-fit: cover; 
     /* box-shadow: 5px -5px 25px var(--accent1-color); */
 
 }
-
-
 
 .collage-item:nth-of-type(1) {
     grid-column: 5/9;
@@ -115,17 +100,10 @@ main * {
 }
 
 
-
-
-
 .reading {
     grid-column: 1/4;
     grid-row: 1/3;
-/* 
-    display: grid;
-    grid-template-columns: repeat(8, 12.5%); */
 
-    /* width: minmax(300px, 1fr); */
     margin: 1.3em;
 
     background-color: var(--paragraph-background-color);
@@ -135,18 +113,15 @@ main * {
 }
 
 .reading h1 {
-    /* grid-column: 2/8; */
     text-align: center;
     justify-self: start;
     margin: 40px auto;
 }
 
 .reading h3 {
-    /* grid-column: 2/8; */
     text-indent: 5em;}
 
 .reading p {
-    /* grid-column: 2/8; */
     text-indent: 2em;
 }
 
@@ -164,26 +139,6 @@ main * {
     width: fit-content;
 
 }
-
-
-/*
-.buttons-grid .button-box:nth-of-type(1),
-.buttons-grid .button-box:nth-of-type(2)  {
-    grid-row: 1;
-}
-
-
-.buttons-grid .button-box:nth-of-type(3),
-.buttons-grid .button-box:nth-of-type(4)  {
-    grid-row: 2;
-}
-*/
-
-
-
-
-
-
 
 
 .button-box a {

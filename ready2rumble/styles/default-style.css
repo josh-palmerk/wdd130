@@ -25,122 +25,6 @@
   --ghost-white: #F0EFF4;
 }
 
-/* img {
-    max-width: 100%;
-} */
-
-
-/*
-
-body {
-    background-color: var(--ghost-white);
-
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, small {
-    font-family: var(--heading-font);
-    color: var(--headline-color-on-color);
-}
-
-p {
-    font-family: var(--paragraph-font);
-    color: var(--paragraph-color-on-color);
-    padding: 1em;
-}
-a {
-    font-family: var(--paragraph-font);
-}
-
-img {
-    display: block;
-    margin: 0 auto;
-}
-
-#content {
-
-    background-color: var(--primary-color);
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.top-bar {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-
-}
-
-#r2r-logo {
-    max-width: 100px;
-    padding: 10px;
-}
-
-
-.top-bar a {
-    height: fit-content;
-    width: fit-content;
-    justify-self: center;
-}
-
-.top-bar h1 {
-    grid-column: span 6;
-
-    padding-left: 20px;
-    align-self: center;
-    color: black;
-}
-
-.socials {
-    grid-column: 8/11;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.socials a {
-    grid-row: 1/2;
-    align-self: center;
-}
-
-.socials h4 {
-    grid-row: 2/3;
-    text-align: center;
-    margin-top: .25em;
-    margin-bottom: .25em;
-    align-self: start;
-    margin-top: 0;
-}
-
-.socials a img {
-    max-width: 80px;
-    width: 100%;
-    margin: auto;
-}
-
-nav {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    background-color: var(--nav-background-color);
-
-
-}
-nav a {
-    text-decoration: none;
-    color: var(--accent1-color);
-    padding: 25px;
-    font-size: 1.3em;
-    margin: 0 40px;    
-}
-nav a:hover {
-    background-color: var(--nav-hover-background-color);
-    color: var(--nav-hover-link-color);
-
-}
-
-
-
-*/
-
 main  {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -232,12 +116,6 @@ main * {
     border-radius: 15px;
 }
 
-/* .info-card:nth-of-type(odd) .button-box {
-    grid-row: 2/3 ;
-    grid-column: 2/5;
-    align-self: end;
-
-} */
 
 .info-card:nth-of-type(even) h3 {
     grid-column: 6/8;
@@ -259,11 +137,6 @@ main * {
     border-radius: 15px;
 }
 
-/* .info-card:nth-of-type(even) .button-box {
-    grid-row: 2/3 ;
-    grid-column: 5/8;
-    align-self: end;
-} */
 
 
 .badge-box {
