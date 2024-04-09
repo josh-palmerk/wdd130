@@ -155,13 +155,13 @@ main * {
     display: grid;
     margin: 70px auto;
     justify-self: center;
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
     column-gap: 10px;
     row-gap: 50px;
 
-    width: 210px;
+    width: fit-content;
 
 }
 
@@ -188,16 +188,16 @@ main * {
 
 .button-box a {
     border-radius: 10px;
-    background-color: var(--ghost-white);
+    background-color: var(--accent1-color);
     height: fit-content;
     width: fit-content;
     padding: 15px;
     text-decoration: none;
-    color: var(--nav-link-color);
+    color: var(--ghost-white);
 }
 .button-box a:hover {
-    background-color: var(--nav-hover-background-color);
-    color: white;
+    background-color: var(--nav-background-color);
+    color: var(--headline-color-on-white);
 }
 
 
